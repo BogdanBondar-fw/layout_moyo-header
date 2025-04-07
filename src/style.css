@@ -1,7 +1,9 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+html {
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  --color-blue: #00acdc;
 }
 
 ul[class],
@@ -26,15 +28,8 @@ dd {
   margin: 0;
 }
 
-html {
-  font-family: Roboto, sans-serif;
-}
-
-body {
-  --color-blue: #00acdc;
-}
-
 .header {
+  box-sizing: border-box;
   display: flex;
   width: 100%;
   align-items: center;
@@ -42,19 +37,22 @@ body {
   padding: 0 50px;
 }
 
-.header__logo-img {
+.header__logo {
   width: 40px;
   height: 40px;
 }
 
 .nav__list {
   display: flex;
-  gap: 20px;
 }
 
 .nav__list-item {
   display: flex;
   position: relative;
+}
+
+.nav__list-item:not(:first-child) {
+  margin-left: 20px;
 }
 
 .nav__list-link {
